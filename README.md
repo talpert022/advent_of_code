@@ -1,9 +1,9 @@
 # Advent Of Code
 
-### Timed Questions
-
--   2015/problem2 -> `14:57`
--   2015/problem3 -> `18:00`
--   2015/problem4 -> `25:12`
--   2015/problem5 -> `37:36`
--   2021/problem5 -> `1:35:32`
+| Question      | Time      | What I learned                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| ------------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 2015/problem2 | `14:57`   |
+| 2015/problem3 | `18:00`   |
+| 2015/problem4 | `25:12`   |
+| 2015/problem5 | `37:36`   |
+| 2021/problem5 | `1:35:32` | - Parsing of input lines in python be written a lot cleaner with `split(delimiter)`, or using regex, rather than a for loop over the strings characters <br> - when using a 2d array, x positions are columns (elements in array) and y positions are rows (arrays in matrix). When retrieving a value from the array you use `array[row][col]` <br> - `cord_str` and `cord_idx` are too similar of variables <br> - learn numpy for array manipulation <br> - reading problem more carefully would have helped recognize all lines were either vertical horizontal or diagonal <br> Using a [direction array](https://github.com/womogenes/AoC-2021-Solutions/blob/7a3fa845af3eb5f56b499121ac2876a899afc4e5/day_05/day_05_p2.py#L25) would have made traversing vent lines simpler |
