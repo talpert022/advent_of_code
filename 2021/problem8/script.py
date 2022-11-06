@@ -97,6 +97,7 @@ for input, output in numbers:
         for idx, digit_wires in enumerate(number_wires):
             if set(digit_wires) == set(display_wires):
                 output_num += str(idx)
+    print(output_num)
     total += int(output_num) 
 
 print(total)
