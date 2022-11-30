@@ -46,10 +46,8 @@ contained_bags = 0
 q = deque([(1, 'shiny gold')])
 while q:
     mult, ob = q.popleft()
-    for out_bag, in_bags in rule_set.items():
-        if out_bag == ob:
-            for num, style in in_bags:
-                contained_bags += mult*num
-                q.append((mult*num, style))
+    for num, style in rule_set[ob]:
+        contained_bags += mult*num
+        q.append((mult*num, style))
 
 print(contained_bags)
