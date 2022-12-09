@@ -68,6 +68,3 @@ for op, rps in rounds:
     tot_score_again += round_score(op, new_rps)
 
 print(tot_score_again)
-
-
-
