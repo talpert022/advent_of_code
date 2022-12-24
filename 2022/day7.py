@@ -15,7 +15,7 @@ class Directory:
                 if sub.size > 0:
                     tot_size += sub.size
                 else:
-                    return float('inf')
+                    return -1
             else:
                 tot_size += int(sub[0])
         
