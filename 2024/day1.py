@@ -31,6 +31,6 @@ for cord in right_locations:
 
 similarity_score = 0
 for cord in left_locations:
-    similarity_score += (cord * right_freqs.get(cord, 0))
+    similarity_score += cord * right_freqs.get(cord, 0)
 
 print(similarity_score)
