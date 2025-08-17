@@ -7,7 +7,7 @@ updates_lines = lines[section_split_idx+1:]
 
 # data processing for part 1
 rules = [[int(page) for page in line.split('|')] for line in rules_lines]
-collated_rules = {} # IIRC js's chosen word for combine lol
+collated_rules = {}
 for rule in rules:
     if rule[0] in collated_rules:
         collated_rules[rule[0]].add(rule[1])
@@ -36,3 +36,23 @@ print(sum)
 '''
 PART 2
 '''
+def reorder(update):
+    right_order = [update[0]]
+    for page_idx in range(1, len(update)):
+        curr_page = update[page_idx]
+        for idx, ordered_page in enumerate(reversed(right_order)):
+            if collated_rules.get(ordered_page) and curr_page in collated_rules[ordered_page]:
+                right_order.insert(len(right_order) - idx, curr_page)
+                break
+        else:
+            right_order.insert(0, curr_page)
+    return right_order
+        
+
+sum = 0
+for update in updates:
+    if not is_right_order(update):
+        reordered_update = reorder(update)
+        sum += reordered_update[len(update)//2]
+
+print(sum)
